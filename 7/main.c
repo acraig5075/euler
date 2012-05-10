@@ -28,6 +28,6 @@ int main(int argc, char *argv[])
 			primes++;
 	}
 	
-	printf("10001'st prime is %d\n", test);
+	printf("%d\n", test);
 	return 0;
 }

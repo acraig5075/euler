@@ -19,15 +19,17 @@ int main(int argc, char *argv[])
 {
 	long long int target = (2 == argc ? atoll(argv[1]) : 600851475143LL);
 	int divisor = 3;
+	int answer = 0;
 	while (divisor <= target)
 	{
 		if (isPrime(divisor) && (0 == target%divisor))
 		{
 			target /= divisor;
-			printf("%d\n", divisor);
+			answer = divisor;
 		}
 		divisor += 2;
 	}
+	printf("%d\n", answer);
 	return 0;
 }
 

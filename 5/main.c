@@ -17,7 +17,7 @@ int main()
 		
 		if (10 == i)
 		{
-			printf("How about %d\n", test);
+			printf("%d\n", test);
 			return 0;
 		}
 	}

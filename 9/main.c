@@ -27,7 +27,7 @@ int main()
 			
 			if (1000 == a + b + c)
 				{
-				printf("%d %d %d %d\n", a, b, c, a * b * c);
+				printf("%d\n", a * b * c);
 				return 0;
 				}
 			}

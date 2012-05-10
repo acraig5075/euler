@@ -54,11 +54,9 @@ int main()
 	{
 		if (isPalindrome(test))
 		{
-			printf("testing palidromic number %d ...\n", test);
-			
 			if (hasFactors(test, &f1, &f2))
 			{
-				printf("... found factors %d and %d.\n", f1, f2);
+				printf("%d\n", test);
 				return 0;
 			}
 		}
