@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
 
 // integer sqrt
@@ -22,8 +21,6 @@ int main()
 		for (int b = a-1; b > 2; b--)
 			{
 			int c = isqrt(a * a + b * b);
-			if (-1 == c)
-				continue;
 			
 			if (1000 == a + b + c)
 				{
