@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include <stdio.h>
 
 #define MONTHS 12
