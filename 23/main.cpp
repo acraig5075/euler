@@ -1,10 +1,10 @@
 #include <iostream>
 #include <set>
 
-#define LIMIT 28123
+#define LIMIT 20161
 
 // return summation of divisors - Abundant numbers are less than this summation
-int count_divisors(int x)
+static inline int count_divisors(int x)
 	{
 	int count = 1;
 	int b = x;
