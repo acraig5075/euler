@@ -2,11 +2,10 @@
 #include <set>
 
 #define LIMIT 28123
-//#define LIMIT 100
 
+// return summation of divisors - Abundant numbers are less than this summation
 int count_divisors(int x)
 	{
-	//std::cout << x << ": ";
 	int count = 1;
 	int b = x;
 	for (int i = 2; i < b; i++)
@@ -15,16 +14,11 @@ int count_divisors(int x)
 			{
 			b = x / i;
 			count += i;
-			//std::cout << i << " ";
 
 			if (i != b)
-				{
 				count += b;
-				//std::cout << b << " ";
-				}
 			}
 		}
-	//std::cout << "(" << count << ")" << std::endl;
 	return count;
 	}
 
@@ -58,21 +52,14 @@ int main()
 		aset.erase(itr1);
 	}
 
-	// sum positive integers not in this list
+	// sum all elements in the list
 	long sum = 0;
-	for (int j = 1; j <= LIMIT; j++)
-		{
-		if (bset.find(j) == bset.end())
-			sum += j;
-		}
-
-	long count = 0;
 	std::set<int>::iterator itr;
 	for (itr = bset.begin(); itr != bset.end(); itr++)
-		count += *itr;
+		sum += *itr;
 
-	std::cout << total << "\n";
-	std::cout << count << "\n";
-	std::cout << sum << "\n";
+	// summation of values not in this list is the difference between
+	// the total and the summation of what is in the list.
+	std::cout << total - sum << "\n";
 	return 0;	
 }
